@@ -14,30 +14,11 @@ CREATE TABLE pacientes(
   ap_paterno VARCHAR(255) NOT NULL,
   ap_materno VARCHAR(255) NOT NULL,
   fec_nacimiento DATE,
-  edad INT,
   telefono1 VARCHAR(255) NOT NULL,
   telefono2 VARCHAR(255) NULL,
   id_procedencia INT,
   FOREIGN KEY (id_procedencia) REFERENCES procedencia(id)
 );
-
-DELIMITER $$
-CREATE TRIGGER trg_pacientes_insert
-BEFORE INSERT ON pacientes
-FOR EACH ROW
-BEGIN
-  SET NEW.edad = TIMESTAMPDIFF(YEAR, NEW.fec_nacimiento, CURDATE());
-END$$
-DELIMITER ;
-
-DELIMITER $$
-CREATE TRIGGER trg_pacientes_update
-BEFORE UPDATE ON pacientes
-FOR EACH ROW
-BEGIN
-  SET NEW.edad = TIMESTAMPDIFF(YEAR, NEW.fec_nacimiento, CURDATE());
-END$$
-DELIMITER ;
 
 INSERT INTO procedencia(id, distrito, provincia, departamento)
 VALUES 
