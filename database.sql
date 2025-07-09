@@ -1,3 +1,5 @@
+CREATE DATABASE practica;
+use practica;
 
 CREATE TABLE procedencia(
   id INT PRIMARY KEY,
