@@ -5,7 +5,7 @@ CREATE TABLE procedencia(
   id INT PRIMARY KEY,
   distrito varchar(255) NOT NULL,
   provincia varchar(255) NOT NULL,
-  departamento varchar(255) NOT NULL,
+  departamento varchar(255) NOT NULL
 );
 
 CREATE TABLE pacientes(
@@ -29,8 +29,8 @@ VALUES (1, 'Nuevo Chimbote', 'Santa', 'Ancash'),
 (5, 'La Esperanza', 'Trujillo', 'La Libertad');
 
 INSERT INTO pacientes(id, nombre, ap_paterno, ap_materno, fec_nacimiento, edad, telefono, id_procedencia)
-VALUES (1, 'Pedro'. 'Martinez', 'Lopez', '1990-05-16', 35, '958459652', 1),
-(2, 'Juan'. 'Fernandez', 'Aguirre', '1995-05-16', 30, '954856321', 2),
-(3, 'Luz'. 'Morales', 'Andrada', '1980-05-12', 45, '954585632', 3),
-(4, 'Fernando'. 'Palomo', 'Lopez', '1970-05-16', 55, '958459652', 4),
-(5, 'Lucero'. 'Palomino', 'Lopez', '2000-05-16', 25, '968563254', 5);
+VALUES (1, 'Pedro', 'Martinez', 'Lopez', '1990-05-16', 35, '958459652', 1),
+(2, 'Juan', 'Fernandez', 'Aguirre', '1995-05-16', 30, '954856321', 2),
+(3, 'Luz', 'Morales', 'Andrada', '1980-05-12', 45, '954585632', 3),
+(4, 'Fernando', 'Palomo', 'Lopez', '1970-05-16', 55, '958459652', 4),
+(5, 'Lucero', 'Palomino', 'Lopez', '2000-05-16', 25, '968563254', 5);
